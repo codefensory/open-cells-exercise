@@ -42,6 +42,9 @@ export class DashboardLayout extends LitElement {
             href="${'#!' + DASHBOARD_PATHS.createClient}"
             >Nuevo Cliente</sp-top-nav-item
           >
+          <sp-top-nav-item @click=${this.handleNavClick} href="${'#!' + DASHBOARD_PATHS.flags}">
+            Banderas
+          </sp-top-nav-item>
           <sp-action-menu style="margin-inline-start: auto;" quiet>
             <sp-menu-item @click=${() => this.pageController.navigate(PATHS.logout)}>
               Cerrar sesión

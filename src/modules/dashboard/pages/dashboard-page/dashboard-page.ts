@@ -7,6 +7,7 @@ import '../../layouts/dashboard-layout';
 import '../../../clients/pages/list-clients/list-client';
 import '../../../clients/pages/create-client/create-client';
 import { AuthController } from '../../../auth/controllers/AuthController';
+import '../../../flags/pages/list-flags/list-flags';
 
 @customElement('dashboard-page')
 export class DashboardPage extends LitElement {
@@ -24,7 +25,7 @@ export class DashboardPage extends LitElement {
       return;
     }
 
-    if (!this.params.page) {
+    if (window.location.hash === `#!${PATHS.dashboard}`) {
       this.pageController.navigate(PATHS.dashboard, { page: 'home' });
 
       return;
@@ -48,6 +49,8 @@ export class DashboardPage extends LitElement {
         return html`<list-clients></list-clients>`;
       case DASHBOARD_PAGES.createClient:
         return html`<create-client></create-client>`;
+      case DASHBOARD_PAGES.flags:
+        return html`<list-flags></list-flags>`;
       default:
         return html`<h1>Oops! Parece que te perdiste</h1>`;
     }

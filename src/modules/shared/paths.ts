@@ -10,6 +10,7 @@ export const DASHBOARD_PAGES = {
   home: '/home',
   clients: '/clients',
   createClient: '/create-client',
+  flags: '/flags',
 };
 
 export const DASHBOARD_PATHS = parentPath(PATHS.dashboard, DASHBOARD_PAGES);

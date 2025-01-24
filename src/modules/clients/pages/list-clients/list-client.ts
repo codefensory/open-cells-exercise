@@ -1,14 +1,14 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, state } from 'lit/decorators';
 
-import styles from './list-client.style.scss?inline';
-
 import { QueryController } from '../../../shared/libs/query-core/QueryController';
 import { getClients } from '../../services/clientsServices';
 
 import '@spectrum-web-components/table/elements.js';
 import '@spectrum-web-components/infield-button/sp-infield-button.js';
 import '@spectrum-web-components/progress-bar/sp-progress-bar.js';
+
+import styles from './list-client.style.scss?inline';
 
 @customElement('list-clients')
 export class ListClients extends LitElement {
