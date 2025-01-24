@@ -1,0 +1,50 @@
+:host {
+  display: block;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--spectrum-heading-color);
+  }
+}
+
+.create-client-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 350px;
+  margin: 0 auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    sp-textfield {
+      width: 100%;
+    }
+
+    .error {
+      color: var(--spectrum-negative-color-900);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+
+    sp-button {
+      padding: 2px 16px;
+    }
+  }
+}

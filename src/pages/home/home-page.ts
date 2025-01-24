@@ -1,19 +1,16 @@
 import { html, LitElement } from 'lit';
 import { PageController } from '@open-cells/page-controller';
 import { customElement } from 'lit/decorators';
+import { AuthController } from '../../modules/auth/controllers/AuthController';
+import { PATHS } from '../../modules/shared/paths';
 
 @customElement('home-page')
 export class HomePage extends LitElement {
   pageController = new PageController(this);
 
-  protected createRenderRoot(): HTMLElement | DocumentFragment {
-    // @ts-ignore
-    return this;
-  }
+  auth = new AuthController(this);
 
-  render() {
-    return html`
-      <button @click="${() => this.pageController.navigate('second')}">Go to second page</button>
-    `;
+  onPageEnter() {
+    this.pageController.navigate(this.auth.isAuthenticate ? PATHS.dashboard : PATHS.login);
   }
 }

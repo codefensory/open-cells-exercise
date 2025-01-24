@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 36px;
+    gap: 20px;
+    border-radius: 20px;
+
+    p {
+      font-size: 26px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: end;
+
+      sp-textfield {
+        width: 320px;
+      }
+
+      sp-button {
+        margin-top: 24px;
+        padding: 2px 15px;
+      }
+    }
+  }
+}

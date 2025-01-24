@@ -1,4 +1,5 @@
-import { RouteDefinition } from '@open-cells/core/types'; 
+import { RouteDefinition } from '@open-cells/core/types';
+import { PATHS, PATHS_INFORMATION } from '../modules/shared/paths';
 
 export const routes: RouteDefinition[] = [
   {
@@ -6,15 +7,39 @@ export const routes: RouteDefinition[] = [
     name: 'home',
     component: 'home-page',
     action: async () => {
-      await import('../pages/home/home-page.js');
+      await import('../pages/home/home-page');
     },
   },
   {
-    path: '/second',
-    name: 'second',
-    component: 'second-page',
+    path: PATHS.login,
+    name: 'login',
+    component: 'login-page',
     action: async () => {
-      await import('../pages/second/second-page.js');
+      await import('../modules/auth/pages/login/login-page');
     },
-  }
+  },
+  {
+    path: PATHS.logout,
+    name: 'logout',
+    component: 'logout-page',
+    action: async () => {
+      await import('../modules/auth/pages/logout/logout-page');
+    },
+  },
+  {
+    path: `${PATHS.dashboard}/:page`,
+    name: 'dashboard',
+    component: 'dashboard-page',
+    action: async () => {
+      await import('../modules/dashboard/pages/dashboard-page/dashboard-page');
+    },
+  },
+  {
+    path: `${PATHS.dashboard}`,
+    name: 'dashboard-bad',
+    component: 'dashboard-page',
+    action: async () => {
+      await import('../modules/dashboard/pages/dashboard-page/dashboard-page');
+    },
+  },
 ];

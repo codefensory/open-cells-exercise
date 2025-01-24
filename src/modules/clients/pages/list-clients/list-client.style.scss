@@ -1,0 +1,43 @@
+:host {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  sp-table {
+    sp-table-head {
+      sp-table-head-cell {
+        padding: 8px 16px;
+        max-width: 130px;
+        min-width: 130px;
+      }
+    }
+
+    sp-table-cell {
+      padding: 8px 16px;
+      max-width: 130px;
+      min-width: 130px;
+
+      #loading {
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+
+    .page-info {
+      font-size: 14px;
+    }
+  }
+}
