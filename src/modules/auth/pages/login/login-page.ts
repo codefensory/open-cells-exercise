@@ -1,12 +1,9 @@
 import { PageController } from '@open-cells/page-controller';
 import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, query, state } from 'lit/decorators';
+import { customElement, query, state } from 'lit/decorators.js';
 
 import style from './login-page.style.scss?inline';
 
-import '@spectrum-web-components/textfield/sp-textfield.js';
-import '@spectrum-web-components/field-label/sp-field-label.js';
-import '@spectrum-web-components/button/sp-button.js';
 import { localApi } from '../../../../api/localApi';
 import { encodeText } from '../../../shared/utils';
 import { PATHS } from '../../../shared/paths';
@@ -14,6 +11,10 @@ import { PublishChannel, publishChannel } from '../../../shared/decorators';
 import { NOTIFICATION_CHANNEL } from '../../../notifications/channels';
 import { NotificationEmit } from '../../../notifications/types';
 import { AuthController } from '../../controllers/AuthController';
+
+import '@spectrum-web-components/textfield/sp-textfield.js';
+import '@spectrum-web-components/field-label/sp-field-label.js';
+import '@spectrum-web-components/button/sp-button.js';
 
 @customElement('login-page')
 export class LoginPage extends LitElement {

@@ -1,5 +1,5 @@
 import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, state } from 'lit/decorators';
+import { customElement, state } from 'lit/decorators.js';
 import { QueryController } from '../../../shared/libs/query-core/QueryController';
 
 import '@spectrum-web-components/table/elements.js';
@@ -54,7 +54,7 @@ export class ListFlags extends LitElement {
           </sp-picker>
         </div>
 
-        <sp-table scroller="true">
+        <sp-table>
           <sp-table-head>
             <sp-table-head-cell>Flag</sp-table-head-cell>
             <sp-table-head-cell>Country</sp-table-head-cell>
@@ -85,7 +85,7 @@ export class ListFlags extends LitElement {
               `,
               success: countries =>
                 countries.map(
-                  country => html`
+                  (country: any) => html`
                     <sp-table-row>
                       <sp-table-cell>
                         <img

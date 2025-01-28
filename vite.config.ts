@@ -13,8 +13,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'lit/decorators': path.resolve(__dirname, 'node_modules/lit/decorators.js'),
       '@': path.resolve(__dirname, 'src/css'),
     },
+  },
+  optimizeDeps: {
+    exclude: ['/__web-dev-server__web-socket.js'],
   },
 });

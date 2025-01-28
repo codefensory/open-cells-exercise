@@ -1,5 +1,5 @@
 import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, state, query } from 'lit/decorators';
+import { customElement, state, query } from 'lit/decorators.js';
 
 import styles from './create-client.style.scss?inline';
 
@@ -7,7 +7,7 @@ import '@spectrum-web-components/textfield/sp-textfield.js';
 import '@spectrum-web-components/button/sp-button.js';
 import '@spectrum-web-components/field-label/sp-field-label.js';
 import { NOTIFICATION_CHANNEL } from '../../../notifications/channels';
-import { channel, PublishChannel, publishChannel } from '../../../shared/decorators';
+import { PublishChannel, publishChannel } from '../../../shared/decorators';
 import { NotificationEmit } from '../../../notifications/types';
 import { localApi } from '../../../../api/localApi';
 import { queryClient } from '../../../shared/libs/query-core/queryClient';
@@ -45,7 +45,7 @@ export class CreateClient extends LitElement {
   private loading: boolean = false;
 
   @publishChannel(NOTIFICATION_CHANNEL)
-  notificate: PublishChannel<NotificationEmit>;
+  notificate!: PublishChannel<NotificationEmit>;
 
   private getFormData(): ClientForm {
     return {

@@ -1,11 +1,11 @@
 import { ToastVariants } from '@spectrum-web-components/toast';
 import { css, html, LitElement, TemplateResult } from 'lit';
-import { customElement, state } from 'lit/decorators';
+import { customElement, state } from 'lit/decorators.js';
 import { channel } from '../../../shared/decorators';
 import { NotificationEmit } from '../../types';
 
 @customElement('app-notification')
-export class AppNotificacion extends LitElement {
+export class AppNotification extends LitElement {
   static styles = css`
     .alerts {
       width: 100vw;

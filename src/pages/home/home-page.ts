@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { PageController } from '@open-cells/page-controller';
-import { customElement } from 'lit/decorators';
+import { customElement } from 'lit/decorators.js';
 import { AuthController } from '../../modules/auth/controllers/AuthController';
 import { PATHS } from '../../modules/shared/paths';
 

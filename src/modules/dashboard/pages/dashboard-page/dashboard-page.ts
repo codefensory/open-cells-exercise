@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators';
+import { customElement, property } from 'lit/decorators.js';
 import { PageController } from '@open-cells/page-controller';
 import { DASHBOARD_PAGES, PATHS } from '../../../shared/paths';
 

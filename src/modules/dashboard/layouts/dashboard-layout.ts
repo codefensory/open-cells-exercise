@@ -1,5 +1,5 @@
 import { css, html, LitElement } from 'lit';
-import { customElement } from 'lit/decorators';
+import { customElement } from 'lit/decorators.js';
 import { DASHBOARD_PATHS, PATHS } from '../../shared/paths';
 
 import '@spectrum-web-components/top-nav/sp-top-nav.js';

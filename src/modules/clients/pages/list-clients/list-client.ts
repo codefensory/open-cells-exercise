@@ -1,5 +1,5 @@
 import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, state } from 'lit/decorators';
+import { customElement, state } from 'lit/decorators.js';
 
 import { QueryController } from '../../../shared/libs/query-core/QueryController';
 import { getClients } from '../../services/clientsServices';

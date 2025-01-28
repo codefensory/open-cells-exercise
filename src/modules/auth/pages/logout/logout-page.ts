@@ -1,6 +1,6 @@
 import { PageController } from '@open-cells/page-controller';
 import { LitElement } from 'lit';
-import { customElement } from 'lit/decorators';
+import { customElement } from 'lit/decorators.js';
 import { PATHS } from '../../../shared/paths';
 
 @customElement('logout-page')

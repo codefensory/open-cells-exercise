@@ -25,6 +25,11 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
+    "types": ["mocha"],
+    "baseUrl": ".",
+    "paths": {
+      "lit/decorators": ["./node_modules/lit/decorators.js"]
+    },
     "plugins": [
       {
         "name": "ts-lit-plugin",
